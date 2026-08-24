@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: "I found a bug or have a feature request. How do I reach you?",
-    a: "Email rylumcgee@gmail.com with as much detail as you can, including your iPhone model and iOS version. We read every message.",
+    a: "Email developer.ryan.mcgee@icloud.com with as much detail as you can, including your iPhone model and iOS version. We read every message.",
   },
 ];
 
@@ -58,10 +58,10 @@ export default function Support() {
         <p className="mt-2 text-fog">
           Email us at{" "}
           <a
-            href="mailto:rylumcgee@gmail.com"
+            href="mailto:developer.ryan.mcgee@icloud.com"
             className="font-semibold text-ember hover:text-halation"
           >
-            rylumcgee@gmail.com
+            developer.ryan.mcgee@icloud.com
           </a>
           . We aim to reply within a couple of days. Including your iPhone model
           and iOS version helps us help you faster.

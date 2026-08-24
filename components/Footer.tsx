@@ -34,10 +34,10 @@ export function Footer() {
             Contact
           </span>
           <a
-            href="mailto:rylumcgee@gmail.com"
+            href="mailto:developer.ryan.mcgee@icloud.com"
             className="text-fog transition-colors hover:text-paper"
           >
-            rylumcgee@gmail.com
+            developer.ryan.mcgee@icloud.com
           </a>
         </div>
       </div>

@@ -32,8 +32,8 @@ export default function Privacy() {
             {POLICY_URL}
           </a>
           . If you have questions, contact us at{" "}
-          <a href="mailto:rylumcgee@gmail.com" className="text-ember hover:text-halation">
-            rylumcgee@gmail.com
+          <a href="mailto:developer.ryan.mcgee@icloud.com" className="text-ember hover:text-halation">
+            developer.ryan.mcgee@icloud.com
           </a>
           .
         </p>
@@ -151,8 +151,8 @@ export default function Privacy() {
             the app processes all data locally on your device and transmits
             nothing to us, we act as a controller of no personal data collected
             through the app. To make a request or ask a question, contact{" "}
-            <a href="mailto:rylumcgee@gmail.com" className="text-ember hover:text-halation">
-              rylumcgee@gmail.com
+            <a href="mailto:developer.ryan.mcgee@icloud.com" className="text-ember hover:text-halation">
+              developer.ryan.mcgee@icloud.com
             </a>
             .
           </p>
@@ -166,8 +166,8 @@ export default function Privacy() {
             </strong>
             , and we have not done so in the preceding 12 months. To make a
             request, contact{" "}
-            <a href="mailto:rylumcgee@gmail.com" className="text-ember hover:text-halation">
-              rylumcgee@gmail.com
+            <a href="mailto:developer.ryan.mcgee@icloud.com" className="text-ember hover:text-halation">
+              developer.ryan.mcgee@icloud.com
             </a>
             .
           </p>
@@ -204,8 +204,8 @@ export default function Privacy() {
           <p>
             Ryan McGee
             <br />
-            <a href="mailto:rylumcgee@gmail.com" className="text-ember hover:text-halation">
-              rylumcgee@gmail.com
+            <a href="mailto:developer.ryan.mcgee@icloud.com" className="text-ember hover:text-halation">
+              developer.ryan.mcgee@icloud.com
             </a>
           </p>
         </Section>
