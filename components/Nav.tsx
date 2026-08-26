@@ -32,10 +32,17 @@ export function Nav() {
 function Mark() {
   return (
     <svg viewBox="0 0 64 64" className="h-7 w-7" aria-hidden="true">
-      <circle cx="32" cy="32" r="17" fill="none" stroke="#e6a15c" strokeWidth="3" />
+      <defs>
+        <linearGradient id="mark-horizon" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#77a1d4" />
+          <stop offset="0.55" stopColor="#c9bfae" />
+          <stop offset="1" stopColor="#e6a15c" />
+        </linearGradient>
+      </defs>
+      <circle cx="32" cy="32" r="17" fill="none" stroke="url(#mark-horizon)" strokeWidth="3" />
       <path
         d="M32 15 L32 49 M17.3 23.5 L46.7 40.5 M17.3 40.5 L46.7 23.5"
-        stroke="#e6a15c"
+        stroke="url(#mark-horizon)"
         strokeWidth="2.4"
         strokeLinecap="round"
         opacity="0.85"

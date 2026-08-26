@@ -1,16 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0b0b0d;
-  --color-ink-soft: #131317;
-  --color-panel: #16161b;
-  --color-line: #26262e;
-  --color-fog: #a4a4b0;
-  --color-fog-soft: #71717f;
+  /* Dark base, tinted navy to echo the app icon's twilight sky
+     rather than reading as flat black. */
+  --color-ink: #0c1421;
+  --color-ink-soft: #121c2c;
+  --color-panel: #172234;
+  --color-line: #29344a;
+  --color-fog: #a6acbd;
+  --color-fog-soft: #737b90;
   --color-paper: #f4f2ee;
+  /* Warm horizon accents (from the icon's amber glow). */
   --color-ember: #e6a15c;
   --color-ember-deep: #c9793a;
   --color-halation: #f4c99a;
+  /* Cool sky accents (from the icon's blue). */
+  --color-azure: #77a1d4;
+  --color-azure-deep: #3f6699;
 
   --font-sans: ui-sans-serif, system-ui, -apple-system, "SF Pro Text",
     "Helvetica Neue", Arial, sans-serif;
@@ -28,6 +34,18 @@ html {
 
 body {
   background-color: var(--color-ink);
+  /* Icon-inspired horizon: cool sky up top, warm amber glow lower-right. */
+  background-image: radial-gradient(
+      120% 80% at 50% -10%,
+      rgba(119, 161, 212, 0.16),
+      transparent 55%
+    ),
+    radial-gradient(
+      90% 70% at 100% 110%,
+      rgba(201, 121, 58, 0.12),
+      transparent 55%
+    );
+  background-attachment: fixed;
   color: var(--color-paper);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

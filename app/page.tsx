@@ -4,7 +4,6 @@ import { asset } from "@/lib/base";
 
 const shots = {
   honest: asset("/screenshots/01-honest-framed.png"),
-  looks: asset("/screenshots/02-looks-framed.png"),
   coach: asset("/screenshots/03-coach-framed.png"),
   camera: asset("/screenshots/camera-seeded-framed.png"),
   studioGrid: asset("/screenshots/studio-grid-framed.png"),
@@ -25,7 +24,7 @@ function Phone({
 }) {
   return (
     <div
-      className={`overflow-hidden rounded-[2rem] border border-line bg-panel shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)] ${className}`}
+      className={`overflow-hidden rounded-[2rem] border border-line bg-panel shadow-[0_30px_80px_-30px_rgba(0,0,0,0.85),0_0_60px_-20px_rgba(119,161,212,0.25),0_20px_70px_-30px_rgba(201,121,58,0.25)] ${className}`}
     >
       <Image
         src={src}
@@ -45,10 +44,10 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div
-          className="pointer-events-none absolute inset-0 opacity-70"
+          className="pointer-events-none absolute inset-0 opacity-80"
           style={{
             background:
-              "radial-gradient(60% 50% at 70% 0%, rgba(230,161,92,0.18), transparent 60%), radial-gradient(50% 40% at 15% 20%, rgba(201,121,58,0.12), transparent 55%)",
+              "radial-gradient(55% 45% at 20% -5%, rgba(119,161,212,0.22), transparent 60%), radial-gradient(60% 50% at 80% 15%, rgba(230,161,92,0.20), transparent 60%), radial-gradient(50% 45% at 55% 100%, rgba(201,121,58,0.14), transparent 55%)",
           }}
         />
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:py-28 lg:grid-cols-2">
@@ -108,8 +107,8 @@ export default function Home() {
           "Cinematic and classic emulsion grades with real grain, bloom and halation.",
         ]}
         footnote="Every look is drawn by hand, not borrowed, so your photos keep their full resolution and their own personality."
-        shot={shots.looks}
-        shotAlt="A live look applied in the Microprism viewfinder"
+        shot={shots.studioGrid}
+        shotAlt="One RAW shot shown in many Microprism looks"
       />
 
       {/* Real camera */}
@@ -134,8 +133,15 @@ export default function Home() {
       </section>
 
       {/* Studio */}
-      <section className="border-y border-line/60 bg-ink-soft">
-        <div className="mx-auto max-w-6xl px-5 py-20">
+      <section className="relative overflow-hidden border-y border-line/60 bg-ink-soft">
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(70% 60% at 15% 0%, rgba(119,161,212,0.14), transparent 60%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-6xl px-5 py-20">
           <Eyebrow>A studio that remembers</Eyebrow>
           <h2 className="mt-3 max-w-2xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
             One RAW. Every look. Whenever you come back to it.
@@ -196,8 +202,15 @@ export default function Home() {
       </section>
 
       {/* Closing band */}
-      <section className="border-t border-line/60 bg-ink-soft">
-        <div className="mx-auto max-w-6xl px-5 py-16 text-center">
+      <section className="relative overflow-hidden border-t border-line/60 bg-ink-soft">
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(80% 90% at 50% 120%, rgba(230,161,92,0.18), transparent 60%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-6xl px-5 py-16 text-center">
           <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
             Shoot honest. Finish with feeling.
           </h2>
