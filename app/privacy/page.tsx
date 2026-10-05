@@ -19,7 +19,7 @@ export default function Privacy() {
         Privacy Policy
       </h1>
       <p className="mt-4 text-[14px] text-fog-soft">
-        Effective date: 2026-08-23 &middot; Last updated: 2026-08-24
+        Effective date: 2026-08-23 &middot; Last updated: 2026-10-05
       </p>
 
       <div className="prose-policy mt-10 space-y-8 leading-relaxed text-fog">
@@ -64,6 +64,19 @@ export default function Privacy() {
               on-device Vision and Foundation Models frameworks. Image analysis
               runs locally on your device. No image or analysis result is sent to
               us or anyone else.
+            </li>
+            <li>
+              <strong className="text-paper">Face detection.</strong> To draw
+              face boxes, lock focus on a face you tap, and coach portraits (for
+              example, noticing closed eyes), the app detects faces in the live
+              camera feed on your device. Face positions are used only in the
+              moment and are never stored, used to identify anyone, or sent
+              anywhere.
+            </li>
+            <li>
+              <strong className="text-paper">Microphone.</strong> Used only while
+              you record a video, to capture its audio. The audio is part of the
+              clip saved to your photo library; it is never sent anywhere.
             </li>
             <li>
               <strong className="text-paper">App settings</strong> (such as your

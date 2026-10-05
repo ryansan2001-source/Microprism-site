@@ -25,6 +25,14 @@ const faqs = [
     a: "No. The optional composition and exposure guidance runs locally using Apple's on-device frameworks. No image or analysis result is ever sent to us or anyone else.",
   },
   {
+    q: "How do I lock focus on a face?",
+    a: "Tap the box around a face on the camera screen. Focus and exposure follow that face as it moves; tap it again to release. You can hide the face boxes in Settings, then Camera, and tapping a face still works.",
+  },
+  {
+    q: "Why do some looks make my photos softer?",
+    a: "On purpose. The retro looks recreate how early phone photos were shared, softer detail included. The cinematic looks and the honest no-look mode keep full detail. In Studio you can re-look any RAW shot in a different style at any time.",
+  },
+  {
     q: "How do I turn the creative prompts on or off?",
     a: "The twice-daily creative prompts are optional. You can enable or disable them, and adjust their timing, in the app's Settings.",
   },
