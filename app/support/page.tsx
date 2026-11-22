@@ -10,11 +10,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "How do I restore my purchase?",
-    a: "Open Settings inside the app, then tap Purchase, then Restore Purchase. As long as you are signed in to the same Apple Account you bought with, your unlock will return at no charge.",
+    a: "Open Studio, tap the gear to open Settings, then tap Restore Purchase in the Purchase section. As long as you are signed in to the same Apple Account you bought with, your unlock will return at no charge.",
+  },
+  {
+    q: "What's free, and what does the unlock include?",
+    a: "Free: honest RAW capture, a set of sample looks, the whole coach and face focus. The one-time unlock, never a subscription, adds the full look catalog, your own .cube LUTs, Studio editing and export, video and long exposure.",
   },
   {
     q: "What is the difference between RAW and Apple ProRAW?",
-    a: "RAW captures the sensor data with the heavy computational processing turned down, so photos look like what the lens actually saw. Apple ProRAW keeps more of Apple's tone mapping and detail work. You can switch between them in the camera settings.",
+    a: "RAW captures the sensor data with the heavy computational processing turned down, so photos look like what the lens actually saw. Apple ProRAW keeps more of Apple's tone mapping and detail work. You can switch to ProRAW in Settings on iPhones that support it.",
   },
   {
     q: "Where are my photos stored?",
@@ -31,6 +35,14 @@ const faqs = [
   {
     q: "Why do some looks make my photos softer?",
     a: "On purpose. The retro looks recreate how early phone photos were shared, softer detail included. The cinematic looks and the honest no-look mode keep full detail. In Studio you can re-look any RAW shot in a different style at any time.",
+  },
+  {
+    q: "How do I import my own LUTs?",
+    a: "Tap the look swatch at the bottom left of the camera, scroll to the end of the list, tap Import LUT and choose one or more .cube files from Files. They appear alongside the built-in looks in the camera and in Studio. Touch and hold an imported LUT to rename or delete it. Microprism supports 3D LUTs up to 65×65×65 made for standard (Rec.709 or sRGB) footage; 1D LUTs and log-input LUTs are not supported. LUT import is part of the unlock.",
+  },
+  {
+    q: "Why does the camera reopen with my last look?",
+    a: "That's Preserve Settings: the camera remembers your look, Photo or Video mode, lens and readouts. To start fresh every time, turn it off in Settings, under Camera.",
   },
   {
     q: "How do I turn the creative prompts on or off?",

@@ -19,7 +19,7 @@ export default function Privacy() {
         Privacy Policy
       </h1>
       <p className="mt-4 text-[14px] text-fog-soft">
-        Effective date: 2026-08-23 &middot; Last updated: 2026-10-05
+        Effective date: 2026-08-23 &middot; Last updated: 2026-11-23
       </p>
 
       <div className="prose-policy mt-10 space-y-8 leading-relaxed text-fog">
@@ -79,8 +79,15 @@ export default function Privacy() {
               clip saved to your photo library; it is never sent anywhere.
             </li>
             <li>
+              <strong className="text-paper">LUT files you import</strong> are
+              copied into the app&rsquo;s on-device storage so you can use them
+              as looks. They are never uploaded, and deleting one in the app
+              removes it.
+            </li>
+            <li>
               <strong className="text-paper">App settings</strong> (such as your
-              &ldquo;Keep RAW&rdquo; preference and creative-prompt schedule) are
+              &ldquo;Keep RAW&rdquo; preference, creative-prompt schedule, and the
+              last look and camera mode for Preserve Settings) are
               stored locally on your device using Apple&rsquo;s standard settings
               storage (UserDefaults).
             </li>

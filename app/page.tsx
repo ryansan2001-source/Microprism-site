@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { asset } from "@/lib/base";
 
+const APP_STORE_URL = "https://apps.apple.com/app/id6801923923";
+
 const shots = {
   honest: asset("/screenshots/01-honest-framed.png"),
   coach: asset("/screenshots/03-coach-framed.png"),
@@ -53,7 +55,7 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:py-28 lg:grid-cols-2">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-line bg-ink-soft px-3 py-1 text-[12px] uppercase tracking-widest text-ember">
-              Coming soon to the App Store
+              Now on the App Store
             </span>
             <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
               Your photos, honest.
@@ -64,21 +66,22 @@ export default function Home() {
               early-smartphone filter era. On your terms.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href={APP_STORE_URL}
+                className="rounded-full bg-ember px-6 py-3 text-[15px] font-semibold text-ink transition-transform hover:-translate-y-0.5"
+              >
+                Get it on the App Store
+              </a>
               <Link
                 href="/#looks"
-                className="rounded-full bg-ember px-6 py-3 text-[15px] font-semibold text-ink transition-transform hover:-translate-y-0.5"
+                className="rounded-full border border-line px-6 py-3 text-[15px] font-semibold text-paper transition-colors hover:border-fog"
               >
                 See the looks
               </Link>
-              <Link
-                href="/support/"
-                className="rounded-full border border-line px-6 py-3 text-[15px] font-semibold text-paper transition-colors hover:border-fog"
-              >
-                Support
-              </Link>
             </div>
             <p className="mt-6 text-[13px] text-fog-soft">
-              Runs entirely on your device. No account, no tracking, nothing
+              Free to start, with a one-time unlock. Never a subscription. Runs
+              entirely on your device: no account, no tracking, nothing
               collected.
             </p>
           </div>
@@ -105,8 +108,9 @@ export default function Home() {
           "Warm, faded color and moody high-contrast fades.",
           "True black and white, from crunchy and neutral to soft and cool.",
           "Cinematic and classic emulsion grades with real grain, bloom and halation.",
+          "Your own .cube LUTs, imported from Files and used right alongside the built-in looks.",
         ]}
-        footnote="Every look is drawn by hand, not borrowed, so your photos keep their full resolution and their own personality."
+        footnote="Every look is drawn by hand, not borrowed. The retro looks soften detail on purpose, the way early phone photos did. The cinematic looks keep every pixel."
         shot={shots.studioGrid}
         shotAlt="One RAW shot shown in many Microprism looks"
       />
@@ -120,11 +124,14 @@ export default function Home() {
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div className="grid gap-4 sm:grid-cols-2">
             <Feature title="RAW and ProRAW" body="Bayer RAW by default, with optional Apple ProRAW when you want it." />
-            <Feature title="Full manual control" body="Focus, exposure, ISO, shutter and zoom, all at your fingertips." />
+            <Feature title="Full manual control" body="Focus, exposure, ISO, shutter and zoom, plus aperture on iPhone 18 Pro." />
+            <Feature title="Face focus" body="Tap a face to lock focus and exposure on it, and it follows as they move." />
             <Feature title="Live readouts" body="A live histogram, focus peaking and zebra stripes for precise exposure." />
             <Feature title="Software long exposure" body="Light trails and silky water, no tripod app required." />
+            <Feature title="Video in your look" body="Record clips with your chosen look applied, live, just as you see it." />
             <Feature title="Studio" body="Come back to any RAW shot later to re-look, crop, straighten and fine-tune. Your original is never touched." />
-            <Feature title="Creative prompts" body="Gentle daily photo challenges that get you out and shooting." />
+            <Feature title="Creative prompts" body="Gentle twice-daily photo challenges that get you out and shooting." />
+            <Feature title="Picks up where you left off" body="The camera reopens with your last look, mode, lens and readouts. Or start fresh every time." />
           </div>
           <div className="mx-auto w-full max-w-[280px]">
             <Phone src={shots.camera} alt="Microprism manual camera controls" />
@@ -147,10 +154,12 @@ export default function Home() {
             One RAW. Every look. Whenever you come back to it.
           </h2>
           <p className="mt-4 max-w-xl text-fog">
-            Re-develop any shot into a new style, non-destructively. Crop,
-            straighten, and adjust exposure, contrast and grain. Import your
-            existing photos to give them a new look, and export to iCloud Drive
-            when you want a backup.
+            Re-develop any shot into a new style, non-destructively, including
+            your own LUTs. Crop freely or to a classic ratio, straighten, and
+            fine-tune exposure, levels and grain, or turn a shot into a
+            screen-print halftone or a two-ink riso duotone. Import your existing
+            photos to give them a new look, and export to iCloud Drive when you
+            want a backup.
           </p>
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             <div className="mx-auto w-full max-w-[240px]">
@@ -169,16 +178,39 @@ export default function Home() {
       {/* Coach (modest) */}
       <SplitSection
         reverse
-        eyebrow="A nudge when you want one"
-        title="An optional helper, only if you ask for it."
+        eyebrow="A coach when you want one"
+        title="It catches it before you shoot."
         points={[
-          "A quick tip in the moment, or a note after the shot.",
-          "It suggests things you can do right now: move, reframe, wait for better light.",
+          "Closed eyes, a tilted horizon, blown highlights, a cut-off hand or a smudged lens, spotted live.",
+          "Tips you can act on right now: where your subject should sit, what to tap, when to wait for the light.",
+          "A quick note after the shot, if you want one.",
           "It never edits your photo for you, and it runs entirely on your device.",
         ]}
         shot={shots.coach}
         shotAlt="An optional composition tip shown over a live scene"
       />
+
+      {/* Pricing */}
+      <section id="pricing" className="mx-auto max-w-6xl px-5 pt-20">
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div className="rounded-[var(--radius-card)] border border-line bg-panel/60 p-8">
+            <Eyebrow>Free to start</Eyebrow>
+            <h3 className="mt-3 text-2xl font-semibold tracking-tight">Shoot right away.</h3>
+            <p className="mt-3 text-fog">
+              Honest RAW capture, a set of sample looks, the whole coach and face
+              focus, at no charge.
+            </p>
+          </div>
+          <div className="rounded-[var(--radius-card)] border border-line bg-panel/60 p-8">
+            <Eyebrow>Yours to unlock</Eyebrow>
+            <h3 className="mt-3 text-2xl font-semibold tracking-tight">One purchase, kept forever.</h3>
+            <p className="mt-3 text-fog">
+              A single one-time unlock, never a subscription, opens the full look
+              catalog, your own .cube LUTs, Studio, video and long exposure.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Privacy */}
       <section className="mx-auto max-w-6xl px-5 py-20">
@@ -215,15 +247,23 @@ export default function Home() {
             Shoot honest. Finish with feeling.
           </h2>
           <p className="mx-auto mt-4 max-w-md text-fog">
-            Microprism is coming to the App Store. Questions in the meantime? We
-            are happy to help.
+            Microprism is on the App Store for iPhone. Questions? We are happy to
+            help.
           </p>
-          <Link
-            href="/support/"
-            className="mt-8 inline-block rounded-full bg-ember px-7 py-3 text-[15px] font-semibold text-ink transition-transform hover:-translate-y-0.5"
-          >
-            Get support
-          </Link>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href={APP_STORE_URL}
+              className="inline-block rounded-full bg-ember px-7 py-3 text-[15px] font-semibold text-ink transition-transform hover:-translate-y-0.5"
+            >
+              Get it on the App Store
+            </a>
+            <Link
+              href="/support/"
+              className="inline-block rounded-full border border-line px-7 py-3 text-[15px] font-semibold text-paper transition-colors hover:border-fog"
+            >
+              Get support
+            </Link>
+          </div>
         </div>
       </section>
     </>
